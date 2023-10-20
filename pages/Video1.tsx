@@ -12,15 +12,17 @@ import Header from "../components/header";
 import {
   Text,
   View,
-  Pressable,
-} from 'react-native';
+  Pressable, StyleSheet, useColorScheme
+} from "react-native";
 
 export default function Video1(props): JSX.Element {
+
+  const isDarkMode = useColorScheme() === 'dark';
 
   const player = React.useRef();
 
   return (
-    <View className=" h-full w-full bg-white dark:bg-neutral-900 relative">
+    <View style={{ backgroundColor:isDarkMode ? '#1f1f1f' : '#ffffff', height:'100%'}}>
 
       <Header title={'Method , Event 예제'}  {...props}/>
 
@@ -128,41 +130,45 @@ export default function Video1(props): JSX.Element {
 
       />
 
-      <View className="py-4 px-3 ">
-          <Text className="font-bold text-[18px] dark:text-white">
+      <View  style={{ padding:10 }}>
+          <Text style={{
+            color:isDarkMode ? '#ffffff' : '#000000',
+            fontSize:20,
+            fontWeight:'bold',
+          }}>
             Method , Event 예제
           </Text>
 
-          <View className="pt-[40] gap-3 w-full flex flex-row justify-start">
-            <Pressable onPress={() => player.current.play()} className="p-3 bg-zinc-950 rounded-md ">
-              <Text className="text-white ">Play</Text>
+          <View style={styles.section}>
+            <Pressable onPress={() => player.current.play()} style={isDarkMode ? styles.btnDark : styles.btnLight}>
+              <Text style={styles.textWhite}>Play</Text>
             </Pressable>
 
-            <Pressable onPress={() => player.current.pause()} className="p-3 bg-zinc-950 rounded-md ">
-              <Text className="text-white ">Pause</Text>
-            </Pressable>
-
-          </View>
-
-        <View className="pt-[40] gap-3 w-full flex flex-row justify-start">
-            <Pressable onPress={() => player.current.prev()} className="p-3 bg-zinc-950 rounded-md ">
-              <Text className="text-white ">Prev</Text>
-            </Pressable>
-
-            <Pressable onPress={() => player.current.next()} className="p-3 bg-zinc-950 rounded-md ">
-              <Text className="text-white ">Next</Text>
+            <Pressable onPress={() => player.current.pause()} style={isDarkMode ? styles.btnDark : styles.btnLight}>
+              <Text style={styles.textWhite}>Pause</Text>
             </Pressable>
 
           </View>
 
-        <View className="pt-[40] gap-3 w-full flex flex-row justify-start">
-
-            <Pressable onPress={() => player.current.controlBarActive()} className="p-3 bg-zinc-950 rounded-md ">
-              <Text className="text-white ">컨트롤바 활성화</Text>
+        <View style={styles.section}>
+            <Pressable onPress={() => player.current.prev()} style={isDarkMode ? styles.btnDark : styles.btnLight}>
+              <Text style={styles.textWhite}>Prev</Text>
             </Pressable>
 
-            <Pressable onPress={() => player.current.controlBarDeactive()} className="p-3 bg-zinc-950 rounded-md ">
-              <Text className="text-white ">컨트롤바 비활성화</Text>
+            <Pressable onPress={() => player.current.next()} style={isDarkMode ? styles.btnDark : styles.btnLight}>
+              <Text style={styles.textWhite}>Next</Text>
+            </Pressable>
+
+          </View>
+
+        <View style={styles.section}>
+
+            <Pressable onPress={() => player.current.controlBarActive()} style={isDarkMode ? styles.btnDark : styles.btnLight}>
+              <Text style={styles.textWhite}>컨트롤바 활성화</Text>
+            </Pressable>
+
+            <Pressable onPress={() => player.current.controlBarDeactive()} style={isDarkMode ? styles.btnDark : styles.btnLight}>
+              <Text style={styles.textWhite}>컨트롤바 비활성화</Text>
             </Pressable>
           </View>
 
@@ -174,3 +180,32 @@ export default function Video1(props): JSX.Element {
   );
 }
 
+
+const styles = StyleSheet.create({
+  section: {
+
+    paddingTop: 30,
+    display:'flex',
+    flexDirection:'row',
+    justifyContent:'start',
+    gap:10,
+
+  },
+  textWhite:{
+    color:'#ffffff',
+  },
+  btnDark: {
+
+    backgroundColor:'#4b4b4b',
+    paddingHorizontal:15,
+    paddingVertical:10,
+    borderRadius:5,
+  },
+  btnLight:{
+    backgroundColor:'#000000',
+    paddingHorizontal:15,
+    paddingVertical:10,
+    borderRadius:5,
+  }
+
+});
