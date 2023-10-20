@@ -21,7 +21,7 @@
     "react-native-screens": "^3.26.0",
     "react-native-svg": "^13.14.0",
     "react-native-track-player": "^3.2.0",
-    "react-native-vpe-beta": "^0.1.3",
+    "react-native-vpe-beta": "^0.1.5",
     "react-native-webview": "^13.6.2"
   },
   "devDependencies": {

@@ -35,7 +35,6 @@ export default function Video1(props): JSX.Element {
   return (
     <View style={{ backgroundColor:isDarkMode ? '#1f1f1f' : '#ffffff', height:'100%'}}>
 
-
       <Header title={'Custom Ui / LL-HLS 예제'}  {...props}/>
 
       <Ncplayer
