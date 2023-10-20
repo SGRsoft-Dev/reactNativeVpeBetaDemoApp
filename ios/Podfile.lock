@@ -384,10 +384,10 @@ PODS:
   - react-native-track-player (4.0.0-rc09):
     - React-Core
     - SwiftAudioEx (= 1.0.0-rc.9)
-  - react-native-video (0.1.6):
+  - react-native-video (0.1.8):
     - React-Core
-    - react-native-video/Video (= 0.1.6)
-  - react-native-video/Video (0.1.6):
+    - react-native-video/Video (= 0.1.8)
+  - react-native-video/Video (0.1.8):
     - React-Core
   - react-native-webview (13.6.2):
     - React-Core
@@ -743,7 +743,7 @@ SPEC CHECKSUMS:
   react-native-orientation-locker: 851f6510d8046ea2f14aa169b1e01fcd309a94ba
   react-native-safe-area-context: 238cd8b619e05cb904ccad97ef42e84d1b5ae6ec
   react-native-track-player: 5f0a8cd501d629ef05fd927da3e5877d4c0f1b83
-  react-native-video: 5dd2564f6d76c35c9bb81087be96ee9cd4a327a6
+  react-native-video: 9809f8b20558cbc66e47e2c3d44e8c223994d1fb
   react-native-webview: 8fc09f66a1a5b16bbe37c3878fda27d5982bb776
   React-NativeModulesApple: 02e35e9a51e10c6422f04f5e4076a7c02243fff2
   React-perflogger: e3596db7e753f51766bceadc061936ef1472edc3
