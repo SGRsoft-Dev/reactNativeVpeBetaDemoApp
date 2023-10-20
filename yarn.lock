@@ -5938,10 +5938,10 @@ react-native-track-player@^3.2.0:
   resolved "https://registry.yarnpkg.com/react-native-track-player/-/react-native-track-player-3.2.0.tgz#c7b7a53eaf4c248af2ac876ef349feaee2ef774a"
   integrity sha512-svv6TOgU/quFV1aajG5PskVhgFG0wHQtO+aYs6cIH0D27ckzN8WVoC3jI94m1CVaSgLMw48P911csYuD2fIcqA==
 
-react-native-vpe-beta@^0.1.5:
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/react-native-vpe-beta/-/react-native-vpe-beta-0.1.5.tgz#93fac5ef890f8f8cf3b9ae6aac19004eacac58be"
-  integrity sha512-MlV97i5yrTB9LdktD855p71xdt53Tct3BrYJ/w2YeuKjxrwFZPUCrJX1GLZcrupVm4/RX119TSzP3Xi+rPQQRA==
+react-native-vpe-beta@^0.1.6:
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/react-native-vpe-beta/-/react-native-vpe-beta-0.1.6.tgz#b71d26ad59f319e24f2fe46ab37c5f3522c97ba5"
+  integrity sha512-x2B1/RsPH6N+thokDwoJ42lbZKH3zwHpODI8gQ4EakzWjxKTiNRS1ThB4EriSymv/+UvZsiIBXDsHpjYA5FOeg==
   dependencies:
     "@miblanchard/react-native-slider" "^2.3.1"
     "@react-native-community/netinfo" "^9.4.1"
