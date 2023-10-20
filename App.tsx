@@ -9,14 +9,19 @@ import React from 'react';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import TrackPlayer, { AppKilledPlaybackBehavior, Capability } from "react-native-track-player";
+
 
 import Home from './pages/Home';
 import Video1 from './pages/Video1';
 import Video2 from './pages/Video2';
 
+
 const Stack = createNativeStackNavigator();
 
+
 function App() {
+
   return (
     <NavigationContainer
       gestureEnabled={true}
