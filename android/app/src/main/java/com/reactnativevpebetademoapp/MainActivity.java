@@ -8,6 +8,11 @@ import com.facebook.react.defaults.DefaultReactActivityDelegate;
 import android.content.Intent;
 import android.content.res.Configuration;
 
+import android.content.Intent;
+import android.content.res.Configuration;
+import android.os.Build;
+import android.util.Log;
+
 public class MainActivity extends ReactActivity {
 
   /**
@@ -40,4 +45,38 @@ public class MainActivity extends ReactActivity {
          intent.putExtra("newConfig", newConfig);
          this.sendBroadcast(intent);
      }
+
+    // PIP 종료 싱크
+  @Override
+  protected void onStop() {
+    super.onStop();
+    Intent intent = new Intent("onPictureInPictureModeExit");
+    this.sendBroadcast(intent);
+  }
+
+    //Home of Recent 버튼 이벤트시 PIP 실행
+  @Override
+  protected void onUserLeaveHint() {
+    super.onUserLeaveHint();
+    Intent intent = new Intent("onUserLeaveHint");
+    this.sendBroadcast(intent);
+  }
+
+    // PIP 모드가 변경되었을때 이벤트로 싱크
+  @Override
+  public void onPictureInPictureModeChanged(boolean isInPictureInPictureMode, Configuration newConfig) {
+    super.onPictureInPictureModeChanged(isInPictureInPictureMode, newConfig);
+    Intent intent = new Intent("onPictureInPictureModeChanged");
+    intent.putExtra("isInPictureInPictureMode", isInPictureInPictureMode);
+    this.sendBroadcast(intent);
+    if(isInPictureInPictureMode) {
+          Log.d("TAG", "onPictureInPictureModeChanged: "+isInPictureInPictureMode);
+        }else{
+         Log.d("TAG", "onPictureInPictureModeChanged: "+isInPictureInPictureMode);
+          Intent intent2 = new Intent("onPictureInPictureModeStop");
+          this.sendBroadcast(intent2);
+       }
+  }
+
+
 }

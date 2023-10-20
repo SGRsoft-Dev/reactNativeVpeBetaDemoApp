@@ -25,6 +25,7 @@ export default function header(props) {
 					<Text style={{
 						textAlign:'center',
 						fontWeight:'bold',
+						color:isDarkMode ? '#ffffff' : '#000000',
 					}}>{props.title}</Text>
 				</View>
 				<View
