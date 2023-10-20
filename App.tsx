@@ -64,60 +64,62 @@ function App(): JSX.Element {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-
-        <Ncplayer
-
-          accessKey={'fd1737d82b2e4b4fba216e3dc5522091'}
-          bundleId={'org.reactjs.native.example.RNVpeTestapp'}
-          packageId={'org.reactjs.native.example.RNVpeTestapp'}
-          stage={'prod'}
-          options={{
-            playlist: [
-              {
-                file: 'https://fsxikvammvwv14470411.cdn.ntruss.com/hls/9N5-iJ4f9tdzE6D708PTmg__/vod/j5IXBfIJ83893893_,1080,720,480,p.mp4.smil/master.m3u8',
-                poster: 'https://nnbkegvqsbcu5297614.cdn.ntruss.com/profile/202310/10a08ce6c6cf76302838183f98da0e2c.png',
-                description: {
-                  title: '1번 영상',
-                  created_at: '2023.07.13',
-                  profile_name: '네이버클라우드',
-                  profile_image: 'https://nnbkegvqsbcu5297614.cdn.ntruss.com/profile/202208/d127c8db642716d84b3201f1d152e52a.png',
-                },
-              },
-
-            ],
-            autostart: true,
-          }}
+      <View>
+        <SafeAreaView style={backgroundStyle}/>
+        <StatusBar
+          barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+          backgroundColor={backgroundStyle.backgroundColor}
         />
+        <ScrollView
+          contentInsetAdjustmentBehavior="automatic"
+          style={backgroundStyle}>
 
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+          <Ncplayer
+
+            accessKey={'fd1737d82b2e4b4fba216e3dc5522091'}
+            bundleId={'org.reactjs.native.example.RNVpeTestapp'}
+            packageId={'org.reactjs.native.example.RNVpeTestapp'}
+            stage={'prod'}
+            options={{
+              playlist: [
+                {
+                  file: 'https://fsxikvammvwv14470411.cdn.ntruss.com/hls/9N5-iJ4f9tdzE6D708PTmg__/vod/j5IXBfIJ83893893_,1080,720,480,p.mp4.smil/master.m3u8',
+                  poster: 'https://nnbkegvqsbcu5297614.cdn.ntruss.com/profile/202310/10a08ce6c6cf76302838183f98da0e2c.png',
+                  description: {
+                    title: '1번 영상',
+                    created_at: '2023.07.13',
+                    profile_name: '네이버클라우드',
+                    profile_image: 'https://nnbkegvqsbcu5297614.cdn.ntruss.com/profile/202208/d127c8db642716d84b3201f1d152e52a.png',
+                  },
+                },
+
+              ],
+              autostart: true,
+            }}
+          />
+
+          <View
+            style={{
+              backgroundColor: isDarkMode ? Colors.black : Colors.white,
+            }}>
+            <Section title="Step One">
+              Edit <Text style={styles.highlight}>App.tsx</Text> to change this
+              screen and then come back to see your edits.
+            </Section>
+            <Section title="See Your Changes">
+              <ReloadInstructions />
+            </Section>
+            <Section title="Debug">
+              <DebugInstructions />
+            </Section>
+            <Section title="Learn More">
+              Read the docs to discover what to do next:
+            </Section>
+            <LearnMoreLinks />
+          </View>
+        </ScrollView>
+
+      </View>
   );
 }
 
