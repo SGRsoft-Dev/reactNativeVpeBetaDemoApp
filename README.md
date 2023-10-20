@@ -51,7 +51,7 @@
 +   }
 + };
 
-TrackPlayerInitializer();
++ TrackPlayerInitializer();
 
 
 +  export const onRegisterPlayback = async () =>{
